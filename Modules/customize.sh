@@ -81,9 +81,6 @@ if [ -z "$ADAWAY_URL" ]; then
   abort "Aborting installation!"
 fi
 
-ui_print "- Found latest version URL."
-ui_print " "
-
 # Define the temporary download path for the APK
 APK_PATH="/data/local/tmp/AdAway.apk"
 
@@ -113,7 +110,6 @@ if [ $? -ne 0 ]; then
   ui_print " "
   ui_print "[!] WARNING: AdAway installation failed."
   ui_print "    This could be due to your device's SELinux policy."
-  ui_print "    You may need to install the APK manually from '$APK_PATH'."
   ui_print " "
 else
   ui_print "- Installation successful."
